@@ -1,4 +1,3 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'url'
@@ -10,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,          // equivalent to --host 0.0.0.0
+    host: true, // equivalent to --host 0.0.0.0
   },
   resolve: {
     alias: {
@@ -18,5 +17,4 @@ export default defineConfig({
     },
     extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json'],
   },
-  // Remove the global ".js as JSX" override – it breaks deps
 })
